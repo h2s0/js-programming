@@ -6,7 +6,7 @@ let clearGridButton = document.getElementById("clear-grid");
 let gridWidth = document.getElementById("width-range");
 let gridHeight = document.getElementById("height-range");
 let colorButton = document.getElementById("color-input");
-let earaseBtn = document.getElementById("erase-btn");
+let eraseBtn = document.getElementById("erase-btn");
 let paintBtn = document.getElementById("paint-btn");
 let widthValue = document.getElementById("width-value");
 let heightValue = document.getElementById("height-value");
@@ -45,6 +45,7 @@ const isTouchDevice = () => {
         return false;
     }
 };
+
 // 함수 호출해 터치 지원 기기인지 판별
 isTouchDevice();
 
@@ -56,27 +57,26 @@ gridButton.addEventListener("click", () => {
     let count = 0;
 
     // 세로 방향으로 최대 그리드 행 생성
-    for ( let i = 0; i < gridHeight.ariaValueMax; i++ ) {
-        count +=2;
+    for ( let i = 0; i < gridHeight.value; i++ ) {
+        count += 2;
         // div 요소 생성해 gridRow 클래스 추가
-        let div = document.createEvent("div");
+        let div = document.createElement("div");
         div.classList.add("gridRow");
 
         // 가로 방향으로 gridWidth.value 만큼의 그리드 셀 생성
         for( let j=0; j < gridWidth.value; j++ ) {
-            count+= 2;
+            count += 2;
             // div 요소 생성해 gridCol 클래스 추가
-            let color = document.createEvent("div");
+            let col = document.createElement("div");
             col.classList.add("gridCol");
             // setAttribute ?
             // gridCol 뒤에 count 값 붙힌 id 값 생성
             col.setAttribute("id", `gridCol${count}`);
-
             // 생성한 div 요소에 이벤트 리스너 추가, 이벤트는 deviceType 에 따라 mousedown 또는 touchstart 가 됨 
-            col.addEventListener(events[deviceType].dom, () => {
+            col.addEventListener(events[deviceType].down, () => {
                 // 사용자가 그리기 시작
                 draw = true;
-                // earse 가 true 일 때 지우개 기능을 사용하므로, 그리드 셀의 배경을 투명색으로 지정
+                // erase 가 true 일 때 지우개 기능을 사용하므로, 그리드 셀의 배경을 투명색으로 지정
                 // false 일 때 그리기 기능을 사용하므로, colorButton 값에 따라 그리드 셀의 배경색 설정
                 if(erase){
                     col.style.backgroundColor = "transparent";
@@ -86,10 +86,10 @@ gridButton.addEventListener("click", () => {
             });
 
             col.addEventListener(events[deviceType].move, (e) => {
-                let elementId = documentFromPoint(
+                let elementId = document.elementFromPoint(
                     !isTouchDevice() ? e.clientX : e.touches[0].clientX,
                     !isTouchDevice() ? e.clientY : e.touches[0].clientY,
-                ), id;
+                ).id;
                 checker(elementId);
             });
 
@@ -107,14 +107,14 @@ gridButton.addEventListener("click", () => {
 
 function checker(elementId) {
 
-    let gridColums = document.querySelectorAll(".gridCol");
+    let gridColumns = document.querySelectorAll(".gridCol");
 
-    gridColums.forEach((element) => {
+    gridColumns.forEach((element) => {
         if (elementId == element.id) {
             if ( draw && !erase) {
                 element.style.backgroundColor = colorButton.value;
             } else if ( draw && erase) {
-                element.style.backgroundColor = "tranperant";
+                element.style.backgroundColor = "transparent";
             }
         }
     });
@@ -124,7 +124,7 @@ clearGridButton.addEventListener("click", () => {
     container.innerHTML = "";
 });
 
-earaseBtn.addEventListener("click", () => {
+eraseBtn.addEventListener("click", () => {
     erase = true;
 });
 
@@ -142,5 +142,5 @@ gridHeight.addEventListener("input", () => {
 
 window.onload = () => {
     gridHeight.value = 0;
-    gridWdith.value = 0;
+    gridWidth.value = 0;
 }
