@@ -21,6 +21,13 @@
 
 ---
 ### 2 - Text Editor
+
+링크 : https://www.youtube.com/watch?v=gRyvG7PZ4m0&list=PLkC56g8fboI0HghByzVuD2Vz8ROUXfF_j&index=2
+
+<br/>
+
+🖼 완성본
+
 <img width="428" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/86673f97-d04b-4b75-b5f2-538757109bd8">
 
 ---
