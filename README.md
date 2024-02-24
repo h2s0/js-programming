@@ -2,6 +2,7 @@
 링크 : https://www.youtube.com/watch?v=DfDPJqD3FjI&list=PLkC56g8fboI0HghByzVuD2Vz8ROUXfF_j
 
 🖼 완성본
+
 <img width="387" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/803f4ce2-76a5-4b7d-b442-c76eb7c92cab">
 
 👩‍💻 추가 기능 구현
