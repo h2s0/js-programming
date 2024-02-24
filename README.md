@@ -1,4 +1,5 @@
 ### 1 - Pixel Art Generator
+
 링크 : https://www.youtube.com/watch?v=DfDPJqD3FjI&list=PLkC56g8fboI0HghByzVuD2Vz8ROUXfF_j
 
 <br/>
@@ -17,6 +18,7 @@
 <img width="104" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/95a0cd5c-27d1-43e8-8435-3b5aaf2421e9">
 
 <br/>
+
 ---
 ### 2 - Text Editor
 <img width="428" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/86673f97-d04b-4b75-b5f2-538757109bd8">
