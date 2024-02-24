@@ -140,12 +140,16 @@ clearGridButton.addEventListener("click", () => {
 eraseBtn.addEventListener("click", () => {
     // 지우개 모드 활성화
     erase = true;
+    event.currentTarget.classList.add("active");
+    paintBtn.classList.remove("active");
 });
 
 // 그리기 버튼에 클릭 이벤트 리스터 추가
 paintBtn.addEventListener("click", () => {
     // 그리기 모드 활성화
     erase = false;
+    event.currentTarget.classList.add("active");
+    eraseBtn.classList.remove("active");
 });
 
 // 그리드 너비 슬라이더에 입력 이벤트 리스너 추가

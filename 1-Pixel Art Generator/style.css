@@ -46,11 +46,28 @@ span{
 }
 
 button{
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     padding: 8px;
     color: #333;
+}
+
+/* 그리드 생성, 제거 버튼 hover */
+#submit-grid:hover{
+    background-color: rgb(158, 122, 76);
+    color: #fff;
+}
+
+#clear-grid:hover{
+    background-color: rgb(158, 122, 76);
+    color: #fff;
+}
+
+/* 지우기, 그리기 버튼 활성화 효과 */
+button.active{
+    background-color: rgb(158, 122, 76);
+    color: #fff;
 }
 
 /* 
