@@ -1,0 +1,147 @@
+.anta-regular {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Anta";
+}
+
+body{
+    background: #1c1e26;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+input[type="color"]{
+    border: none;
+    width: 32.5%;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* outline : 모든 외곽선 속성을 한꺼번에 지정, outline:0 또는 none 설정 시 브라우저의 기본 포커스 스타일이 사라짐 */
+.qr-text{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background: #181b29;
+    border: 1px solid #414866;
+    margin: 0.5rem 0 1rem 0;
+    outline: none;
+    color: #fff;
+}
+
+.qr-text::placeholder{
+    color: rgb(58, 65, 71);
+    font-weight: 500;
+}
+
+#qr-code{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414866;
+}
+
+#qr-code img, #qr-code canvas{
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sizes{
+    width: 32.5%;
+    height: 40px;
+    border: 1px solid #414866;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn{
+    color: #fff;
+    max-width: 200px;
+    padding: 14px;
+    background: #3c4468;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: #566196;
+    font-size: 1.15rem;
+}
+
+.btn svg{
+    width: 20px;
+    margin-left: 10px;
+}
+
+.share-btn{
+    margin-left: 0.7rem;
+}
+
+.action-container{
+    display: flex;
+    margin: 1rem 0;
+}
+
+@media (max-width: 512px){
+    body{
+        max-width: 100%;
+        padding: 10px;
+    }
+    #qr-code{
+        width: 95vw;
+        height: 95vw;
+    }
+    #qr-code img, #qr-code canvas{
+        max-width: 95vw !important;
+        max-height: 95vw !important;
+    }
+    .btn{
+        min-width: unset;
+    }
+}
+
+@media (max-width: 350px){
+    .action-container{
+        flex-direction: column;
+    }
+    .share-btn{
+        margin-left: 0;
+        margin-top: 0.7rem;
+    }
+}
