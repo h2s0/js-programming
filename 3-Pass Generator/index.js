@@ -4,6 +4,7 @@ const options = document.querySelectorAll(".option input");
 const copyIcon = document. querySelector(".input-box span");
 const passwordInput = document.querySelector(".input-box input");
 const passIndicator = document.querySelector(".pass-indicator");
+const passIndicatorText = document.querySelector(".pass-indicator-text");
 const generateBtn = document.querySelector(".generate-btn");
 
 const characters = {
@@ -55,5 +56,36 @@ const generatePassword = () => {
 
 // 비밀번호 강도 표시
 const updatePassIndicator = () => {
-
+    const strength =
+        lengthSlider.value <= 8 ? "weak"
+        : lengthSlider.value <= 16 ? "medium"
+        : "strong";
+    passIndicator.id = strength;
+    
+    passIndicatorText.innerText = strength.charAt(0).toUpperCase() + strength.slice(1);
 }
+
+const updateSlider = () => {
+    document.querySelector(".pass-length span").innerText = lengthSlider.value;
+    generatePassword();
+    updatePassIndicator();
+}
+updateSlider();
+
+// 비밀번호를 클립보드에 복사
+const copyPassword = () => {
+    navigator.clipboard.writeText(passwordInput.value);
+    copyIcon.innerText = "check";
+    copyIcon.style.color = "#4285f4";
+    setTimeout(() => {
+        copyIcon.innerText = "copy_all";
+        copyIcon.style.color = "#707070";
+    }, 1500);
+}
+
+// password copy 버튼에 이벤트 리스너 추가, 함수를 호출하여 비밀번호를 클립보드에 복사
+copyIcon.addEventListener("click", copyPassword);
+// 비밀번호 길이 설정 슬라이더 값이 변경될 때마다 
+lengthSlider.addEventListener("input", updateSlider);
+// 비밀번호 생성 버튼 클릭 시, 새로운 비밀번호 생성
+generateBtn.addEventListener("click", generatePassword);
