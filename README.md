@@ -56,4 +56,15 @@
 <img width="302" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/e8ba075a-93d5-4b96-91da-177311d18b78">
 <img width="299" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/19cb26b5-7ab1-4780-973e-979e1f0fe9ea">
 
+---
+### 4 - QR Code Generator
+
+링크 : https://www.youtube.com/watch?v=I50Xwve6QW4&list=PLkC56g8fboI0HghByzVuD2Vz8ROUXfF_j&index=4
+
+<br/>
+
+🖼 완성본
+
+![image](https://github.com/h2s0/js-programming/assets/134567479/91d846f6-de8a-48f4-a038-5a4947aa216b)
+
 
