@@ -1,6 +1,4 @@
 
 
-console.log('hello js!');
-
-const a = 10
+import { xhrPromise } from "./lib/index.js";
 
