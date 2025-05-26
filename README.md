@@ -10,7 +10,7 @@
 
 <br/>
 
-👩‍💻 추가 기능 구현
+👩‍💻
 - Create Grid, Clear Grid 버튼 hover 추가
 <img width="157" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/62dfc684-e866-4e55-ba76-f4a403f85337">
 
@@ -43,7 +43,7 @@
 
 <br/>
 
-👩‍💻 추가 기능 구현
+👩‍💻
 - options 버튼 hover 추가
 <img width="302" alt="image" src="https://github.com/h2s0/js-programming/assets/134567479/4b0f0b52-bf0f-4288-8359-4c2378f41504">
 
